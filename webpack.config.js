@@ -1,6 +1,5 @@
 const path = require('path')
-const webpack = require('webpack')
-const copyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = (() => {
   const babelLoader = {
@@ -30,9 +29,9 @@ module.exports = (() => {
       filename: 'dist/index.js'
     },
     plugins: [
-      new copyWebpackPlugin([
-                { from: path.resolve(__dirname, 'src/css/index.css'), to: path.resolve(__dirname, 'dist/css/index.css') },
-                { from: path.resolve(__dirname, 'src/index.html'), to: path.resolve(__dirname, 'dist/index.html') }
+      new CopyWebpackPlugin([
+        { from: path.resolve(__dirname, 'src/css/index.css'), to: path.resolve(__dirname, 'dist/css/index.css') },
+        { from: path.resolve(__dirname, 'src/index.html'), to: path.resolve(__dirname, 'dist/index.html') }
       ])
     ],
     resolve: {
