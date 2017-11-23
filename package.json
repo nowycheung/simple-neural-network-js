@@ -1,0 +1,21 @@
+{
+  "name": "simple-neural-network-js",
+  "version": "0.0.1",
+  "description": "Simple Neural Network Implementation",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && webpack --hide-modules -p",
+    "build:watch": "webpack --watch --progress"
+  },
+  "author": "Nowy Condro",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-env": "^1.6.1",
+    "copy-webpack-plugin": "^4.2.3",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.8.1"
+  }
+}
